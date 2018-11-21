@@ -43,6 +43,7 @@ class RoomController implements BeanMessage {
 
         Room room
         try {
+            println "--save method--"
             room = roomDataService.save(cmd.name)
         } catch (ValidationException e) {
             flash.error = beanMessage(e, messageSource).join(',')
